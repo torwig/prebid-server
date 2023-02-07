@@ -203,6 +203,7 @@ func (r InfoReaderFromDisk) Read() (map[string][]byte, error) {
 }
 
 func LoadBidderInfoFromDisk(path string) (BidderInfos, error) {
+	log.Println("add custom change to test something")
 	bidderInfoReader := InfoReaderFromDisk{Path: path}
 	return LoadBidderInfo(bidderInfoReader)
 }
